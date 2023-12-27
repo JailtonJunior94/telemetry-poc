@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "GoApp",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/go/main.go",
+            "args": []
+        },
+        {
+            "name": "NodeApp",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/nodejs/index.js"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "GoApp + NodeApp",
+            "configurations": [
+                "GoApp",
+                "NodeApp"
+            ]
+        }
+    ]
+}
